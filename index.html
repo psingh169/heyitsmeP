@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pooja | Vlog & Blog</title>
-  
+
   <!-- Cute and italic fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:ital,wght@1,400;1,700&family=Rubik:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 
@@ -14,26 +14,23 @@
     body {
       font-family:'Rubik', sans-serif;
       font-style: italic;
-      background: linear-gradient(120deg,#ffe0ec,#e0f7ff,#fff5d7);
-      background-size:200% 200%;
-      animation: bgMove 10s ease infinite;
       color:#333;
-    }
-
-    @keyframes bgMove {
-      0%{background-position:0% 50%;}
-      50%{background-position:100% 50%;}
-      100%{background-position:0% 50%;}
+      background-image: url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-blend-mode: lighten;
+      background-color: rgba(255, 255, 255, 0.6);
     }
 
     header {
-      position:fixed;
-      width:100%;
+      position: fixed;
+      width: 100%;
       top:0;
       display:flex;
       justify-content:space-between;
       padding:1rem 2rem;
-      background:rgba(255,255,255,0.8);
+      background: rgba(255,255,255,0.8);
       backdrop-filter: blur(10px);
       z-index: 1000;
     }
@@ -53,9 +50,26 @@
       color:#555;
       font-weight:600;
       font-style: italic;
+      transition: 0.3s;
     }
 
-    /* HERO */
+    nav a:hover {
+      color: #ff6f91;
+    }
+
+    section {
+      padding:6rem 2rem 4rem 2rem;
+      text-align:center;
+    }
+
+    section h2 {
+      font-family:'Dancing Script', cursive;
+      font-style: italic;
+      font-size:2.8rem;
+      margin-bottom:2rem;
+      text-shadow: 1px 1px 4px rgba(255,255,255,0.7);
+    }
+
     .hero {
       height:100vh;
       display:flex;
@@ -64,23 +78,19 @@
       align-items:center;
       text-align:center;
       padding:2rem;
-      background-image: url('https://source.unsplash.com/800x600/?cute,flowers'); /* Hero background photo */
-      background-size: cover;
-      background-position: center;
       color: #fff;
-      text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+      text-shadow: 1px 1px 8px rgba(0,0,0,0.4);
+      background: rgba(255,255,255,0.1);
     }
 
     .hero h2 {
-      font-size:3rem;
-      font-family:'Dancing Script', cursive;
-      font-style: italic;
+      font-size:3.5rem;
       margin-bottom:1rem;
     }
 
     .typing {
-      font-size:1.3rem;
-      border-right:3px solid;
+      font-size:1.5rem;
+      border-right:3px solid #fff;
       white-space:nowrap;
       overflow:hidden;
       animation: typing 4s steps(40), blink .7s infinite;
@@ -95,19 +105,6 @@
       50% { border-color:transparent }
     }
 
-    /* BLOG SECTION */
-    section {
-      padding:5rem 2rem;
-      text-align:center;
-    }
-
-    section h2 {
-      font-family:'Dancing Script', cursive;
-      font-style: italic;
-      font-size:2.5rem;
-      margin-bottom:2rem;
-    }
-
     .cards {
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -116,23 +113,29 @@
     }
 
     .card {
-      background:white;
+      background: rgba(255,255,255,0.85);
       padding:1rem;
-      border-radius:15px;
+      border-radius:20px;
       transition:0.3s;
       cursor:pointer;
       font-style: italic;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     }
 
     .card:hover {
       transform:translateY(-10px) scale(1.03);
-      box-shadow:0 15px 30px rgba(0,0,0,0.2);
+      box-shadow:0 15px 30px rgba(0,0,0,0.25);
     }
 
     .card img, .card video {
       width:100%;
-      border-radius:10px;
+      border-radius:15px;
       margin-bottom:10px;
+    }
+
+    .card p {
+      font-size:1.1rem;
+      color:#333;
     }
 
     footer {
@@ -142,6 +145,16 @@
       color:white;
       font-family:'Dancing Script', cursive;
       font-style: italic;
+    }
+
+    /* Responsive adjustments */
+    @media(max-width:600px){
+      .hero h2 {
+        font-size:2.5rem;
+      }
+      .typing {
+        font-size:1.2rem;
+      }
     }
 
   </style>
@@ -154,6 +167,7 @@
   <nav>
     <a href="#">Home</a>
     <a href="#blog">Blog</a>
+    <a href="#vision">Vision</a>
     <a href="#vlog">Vlog</a>
   </nav>
 </header>
@@ -161,7 +175,7 @@
 <!-- HERO -->
 <section class="hero">
   <h2>Hi, it’s P here ✨</h2>
-  <p class="typing">welcome to my world — where life, stories, and little moments come alive.</p>
+  <p class="typing">Welcome to my world — where life, stories, and little moments come alive.</p>
 </section>
 
 <!-- BLOG -->
@@ -172,15 +186,36 @@
       <img src="https://source.unsplash.com/400x300/?coffee" alt="coffee"/>
       <p>Slow mornings & thoughts</p>
     </div>
-
     <div class="card">
       <img src="https://source.unsplash.com/400x300/?city" alt="city"/>
       <p>City life diaries</p>
     </div>
-
     <div class="card">
       <img src="https://source.unsplash.com/400x300/?travel" alt="travel"/>
       <p>Moments from my travels</p>
+    </div>
+  </div>
+</section>
+
+<!-- VISION BOARD -->
+<section id="vision">
+  <h2>My Vision Board 🌟</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="https://source.unsplash.com/400x300/?travel,adventure" alt="Travel"/>
+      <p>Travel ✈️</p>
+    </div>
+    <div class="card">
+      <img src="https://source.unsplash.com/400x300/?nature,forest" alt="Nature"/>
+      <p>Nature 🌿</p>
+    </div>
+    <div class="card">
+      <img src="https://source.unsplash.com/400x300/?family,home" alt="Family"/>
+      <p>Family ❤️</p>
+    </div>
+    <div class="card">
+      <img src="https://source.unsplash.com/400x300/?hobby,activity" alt="Activities"/>
+      <p>Activities 🎨</p>
     </div>
   </div>
 </section>
@@ -196,7 +231,6 @@
       </video>
       <p>Day in my life</p>
     </div>
-
     <div class="card">
       <video controls>
         <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
@@ -204,7 +238,6 @@
       </video>
       <p>Golden hour vibes</p>
     </div>
-
     <div class="card">
       <video controls>
         <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
@@ -221,35 +254,3 @@
 
 </body>
 </html>
-<style>
-  /* Add this at the top or replace your body style */
-  body {
-    font-family:'Rubik', sans-serif;
-    font-style: italic;
-    color:#333;
-
-    /* Aesthetic background image */
-    background-image: url('https://source.unsplash.com/1600x900/?pastel,aesthetic,nature'); 
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-
-    /* Overlay gradient for readability */
-    background-blend-mode: lighten;
-    background-color: rgba(255, 255, 255, 0.5);
-
-    /* Optional: subtle gradient animation */
-    animation: bgMove 15s ease infinite;
-  }
-
-  @keyframes bgMove {
-    0%{background-position:0% 50%;}
-    50%{background-position:100% 50%;}
-    100%{background-position:0% 50%;}
-  }
-
-  /* Optional: add subtle text shadows to all headings and paragraphs */
-  h2, p, .card p {
-    text-shadow: 1px 1px 4px rgba(255,255,255,0.6);
-  }
-</style>
