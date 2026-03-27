@@ -4,13 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pooja | Vlog & Blog</title>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+  
+  <!-- Cute and italic fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:ital,wght@1,400;1,700&family=Rubik:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 
   <style>
     * { margin:0; padding:0; box-sizing:border-box; }
 
     body {
       font-family:'Rubik', sans-serif;
+      font-style: italic;
       background: linear-gradient(120deg,#ffe0ec,#e0f7ff,#fff5d7);
       background-size:200% 200%;
       animation: bgMove 10s ease infinite;
@@ -32,11 +35,13 @@
       padding:1rem 2rem;
       background:rgba(255,255,255,0.8);
       backdrop-filter: blur(10px);
+      z-index: 1000;
     }
 
     header h1 {
-      font-family:'Playfair Display', serif;
+      font-family:'Dancing Script', cursive;
       font-size:2rem;
+      font-style: italic;
       background:linear-gradient(45deg,#ff6f91,#ff9671);
       -webkit-background-clip:text;
       -webkit-text-fill-color:transparent;
@@ -47,6 +52,7 @@
       text-decoration:none;
       color:#555;
       font-weight:600;
+      font-style: italic;
     }
 
     /* HERO */
@@ -58,11 +64,17 @@
       align-items:center;
       text-align:center;
       padding:2rem;
+      background-image: url('https://source.unsplash.com/800x600/?cute,flowers'); /* Hero background photo */
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
     }
 
     .hero h2 {
       font-size:3rem;
-      font-family:'Playfair Display', serif;
+      font-family:'Dancing Script', cursive;
+      font-style: italic;
       margin-bottom:1rem;
     }
 
@@ -89,6 +101,13 @@
       text-align:center;
     }
 
+    section h2 {
+      font-family:'Dancing Script', cursive;
+      font-style: italic;
+      font-size:2.5rem;
+      margin-bottom:2rem;
+    }
+
     .cards {
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -102,6 +121,7 @@
       border-radius:15px;
       transition:0.3s;
       cursor:pointer;
+      font-style: italic;
     }
 
     .card:hover {
@@ -109,7 +129,7 @@
       box-shadow:0 15px 30px rgba(0,0,0,0.2);
     }
 
-    .card img {
+    .card img, .card video {
       width:100%;
       border-radius:10px;
       margin-bottom:10px;
@@ -120,6 +140,8 @@
       padding:2rem;
       background:#ff6f91;
       color:white;
+      font-family:'Dancing Script', cursive;
+      font-style: italic;
     }
 
   </style>
@@ -147,17 +169,17 @@
   <h2>My Stories</h2>
   <div class="cards">
     <div class="card">
-      <img src="https://source.unsplash.com/400x300/?coffee" />
+      <img src="https://source.unsplash.com/400x300/?coffee" alt="coffee"/>
       <p>Slow mornings & thoughts</p>
     </div>
 
     <div class="card">
-      <img src="https://source.unsplash.com/400x300/?city" />
+      <img src="https://source.unsplash.com/400x300/?city" alt="city"/>
       <p>City life diaries</p>
     </div>
 
     <div class="card">
-      <img src="https://source.unsplash.com/400x300/?travel" />
+      <img src="https://source.unsplash.com/400x300/?travel" alt="travel"/>
       <p>Moments from my travels</p>
     </div>
   </div>
@@ -168,17 +190,26 @@
   <h2>Vlog Moments 🎥</h2>
   <div class="cards">
     <div class="card">
-      <img src="https://source.unsplash.com/400x300/?camera" />
+      <video controls>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
       <p>Day in my life</p>
     </div>
 
     <div class="card">
-      <img src="https://source.unsplash.com/400x300/?sunset" />
+      <video controls>
+        <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
       <p>Golden hour vibes</p>
     </div>
 
     <div class="card">
-      <img src="https://source.unsplash.com/400x300/?aesthetic" />
+      <video controls>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
       <p>Random little moments</p>
     </div>
   </div>
