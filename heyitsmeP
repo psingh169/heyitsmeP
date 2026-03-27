@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pooja | Vlog & Blog</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+
+    body {
+      font-family:'Rubik', sans-serif;
+      background: linear-gradient(120deg,#ffe0ec,#e0f7ff,#fff5d7);
+      background-size:200% 200%;
+      animation: bgMove 10s ease infinite;
+      color:#333;
+    }
+
+    @keyframes bgMove {
+      0%{background-position:0% 50%;}
+      50%{background-position:100% 50%;}
+      100%{background-position:0% 50%;}
+    }
+
+    header {
+      position:fixed;
+      width:100%;
+      top:0;
+      display:flex;
+      justify-content:space-between;
+      padding:1rem 2rem;
+      background:rgba(255,255,255,0.8);
+      backdrop-filter: blur(10px);
+    }
+
+    header h1 {
+      font-family:'Playfair Display', serif;
+      font-size:2rem;
+      background:linear-gradient(45deg,#ff6f91,#ff9671);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    nav a {
+      margin-left:1rem;
+      text-decoration:none;
+      color:#555;
+      font-weight:600;
+    }
+
+    /* HERO */
+    .hero {
+      height:100vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:2rem;
+    }
+
+    .hero h2 {
+      font-size:3rem;
+      font-family:'Playfair Display', serif;
+      margin-bottom:1rem;
+    }
+
+    .typing {
+      font-size:1.3rem;
+      border-right:3px solid;
+      white-space:nowrap;
+      overflow:hidden;
+      animation: typing 4s steps(40), blink .7s infinite;
+    }
+
+    @keyframes typing {
+      from { width:0 }
+      to { width:100% }
+    }
+
+    @keyframes blink {
+      50% { border-color:transparent }
+    }
+
+    /* BLOG SECTION */
+    section {
+      padding:5rem 2rem;
+      text-align:center;
+    }
+
+    .cards {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:1.5rem;
+      margin-top:2rem;
+    }
+
+    .card {
+      background:white;
+      padding:1rem;
+      border-radius:15px;
+      transition:0.3s;
+      cursor:pointer;
+    }
+
+    .card:hover {
+      transform:translateY(-10px) scale(1.03);
+      box-shadow:0 15px 30px rgba(0,0,0,0.2);
+    }
+
+    .card img {
+      width:100%;
+      border-radius:10px;
+      margin-bottom:10px;
+    }
+
+    footer {
+      text-align:center;
+      padding:2rem;
+      background:#ff6f91;
+      color:white;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>P</h1>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#blog">Blog</a>
+    <a href="#vlog">Vlog</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <h2>Hi, it’s P here ✨</h2>
+  <p class="typing">welcome to my world — where life, stories, and little moments come alive.</p>
+</section>
+
+<!-- BLOG -->
+<section id="blog">
+  <h2>My Stories</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="https://source.unsplash.com/400x300/?coffee" />
+      <p>Slow mornings & thoughts</p>
+    </div>
+
+    <div class="card">
+      <img src="https://source.unsplash.com/400x300/?city" />
+      <p>City life diaries</p>
+    </div>
+
+    <div class="card">
+      <img src="https://source.unsplash.com/400x300/?travel" />
+      <p>Moments from my travels</p>
+    </div>
+  </div>
+</section>
+
+<!-- VLOG -->
+<section id="vlog">
+  <h2>Vlog Moments 🎥</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="https://source.unsplash.com/400x300/?camera" />
+      <p>Day in my life</p>
+    </div>
+
+    <div class="card">
+      <img src="https://source.unsplash.com/400x300/?sunset" />
+      <p>Golden hour vibes</p>
+    </div>
+
+    <div class="card">
+      <img src="https://source.unsplash.com/400x300/?aesthetic" />
+      <p>Random little moments</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Made with ✨ by Pooja</p>
+</footer>
+
+</body>
+</html>
